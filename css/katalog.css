@@ -16,7 +16,7 @@ nav .ghost-button::before {
 }
 
 nav .ghost-button:hover::before {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 nav.main-nav ul .sign-up-button {
