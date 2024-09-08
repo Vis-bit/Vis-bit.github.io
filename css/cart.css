@@ -73,6 +73,15 @@ main > h5 {
     align-items: center;
 }
 
+.bottom-bar .ghost-button {
+    padding: 0;
+}
+
+.bottom-bar .ghost-button a {
+    padding: 1rem 2rem;
+    color: var(--brown);
+}
+
 @media only screen and (max-width: 600px) {
     .item > div > p {
         display: none;
