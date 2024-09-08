@@ -28,7 +28,7 @@ nav .ghost-button::before {
 
 main .ghost-button:hover::before,
 nav .ghost-button:hover::before {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 nav.main-nav a,
