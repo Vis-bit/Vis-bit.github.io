@@ -1,0 +1,92 @@
+nav.main-nav a {
+    --color: var(--brown);
+}
+
+main.flex-row {
+    gap: 4rem;
+    align-items: center;
+    padding-top: 12rem;
+}
+
+a {
+    color: var(--brown);
+}
+
+.container {
+    gap: 2rem;
+}
+
+.container > p {
+    margin-bottom: 2rem;
+}
+
+.container > .contents {
+    max-width: 60%;
+    gap: 2rem;
+}
+
+.container.login .sign-up-form,
+.container.login .sign-up-button,
+.container.login .alt-login-button {
+    display: none;
+}
+
+.container.sign-up .login-form,
+.container.sign-up .login-button,
+.container.sign-up .alt-sign-up-button {
+    display: none;
+}
+
+.contents form {
+    gap: 1rem;
+}
+
+.contents form input:not([type="checkbox"]) {
+    width: 100%;
+}
+
+.contents form .underline-button {
+    align-self: flex-start;
+    margin-top: -.5rem;
+    color: var(--brown);
+    opacity: .5;
+}
+
+.contents .ghost-button,
+.contents input {
+    --color: var(--brown);
+}
+
+.contents .ghost-button {
+    align-self: center;
+    font-family: 'Antique Ancienne Italic';
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.contents .ghost-button > a {
+    padding: 1rem 2rem;
+}
+
+.contents > div.flex-column {
+    align-items: center;
+}
+
+.contents .alternatives {
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contents .alternatives img {
+    object-fit: contain;
+}
+
+.contents > div.flex-column > p {
+    gap: 1ch;
+    color: var(--brown50);
+}
+
+.contents > div.flex-column > p > button {
+    color: var(--brown);
+    font-size: 1rem;
+}

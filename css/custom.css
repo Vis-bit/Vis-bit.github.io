@@ -1,0 +1,409 @@
+nav.main-nav a {
+    --color: var(--brown);
+}
+
+main.flex-column {
+    width: 100vw;
+    height: 100dvh;
+    padding: 8rem 6rem 4rem 6rem;
+}
+
+main.flex-column > p {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 0;
+}
+
+.button-container {
+    align-self: flex-start;
+}
+
+.button-container button {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    --color: var(--brown);
+}
+
+.button-container button[disabled] {
+    opacity: .5;
+}
+
+.button-container > button.next {
+    color: white;
+}
+
+.carousel {
+    flex: 1;
+    min-height: 0;
+}
+
+.carousel-inner-container {
+    gap: 6rem;
+    max-height: 100%;
+    align-items: center;
+    transition: 500ms;
+}
+
+.carousel-inner-container > * {
+    width: calc(100vw - 12rem);
+    max-height: 100%;
+}
+
+.step-1-choices,
+.dimensions {
+    gap: 2rem;
+}
+
+.step-1-choices {
+    overflow-x: auto;
+    overflow-y: clip;
+    max-height: 100%;
+}
+
+.step-1-choices > div,
+.dimensions-card {
+    flex-shrink: 0;
+    flex-basis: 30%;
+    text-align: center;
+    gap: 1rem;
+    min-height: 0;
+    cursor: pointer;
+}
+
+.step-1-choices > div.active,
+.dimensions-card > div.active {
+    border: 2px solid var(--brown);
+}
+
+.step-1-choices > div {
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: var(--beige);
+    padding: 1rem 2rem;
+    border: 1px solid var(--brown);
+}
+
+.step-1-choices > div::before,
+.dimensions-card > div::before {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background-color: #78431320;
+    filter: blur(4px);
+    transition: 500ms;
+}
+
+.step-1-choices > div:hover::before,
+.dimensions-card > div:hover::before {
+    background-color: #78431340;
+    filter: blur(8px);
+}
+
+.step-1-choices > div > img,
+.dimensions-card div > img {
+    min-height: 0;
+    max-height: 100%;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
+.step-1-choices div > p,
+.dimensions-card > div > p {
+    font-family: 'Antique Ancienne Italic';
+}
+
+.map-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    max-height: 100%;
+    align-self: center;
+}
+
+.map {
+    visibility: hidden;
+}
+
+.maps {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.map-parts {
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 1;
+    transform-origin: center left;
+}
+
+.map-parts .part {
+    position: absolute;
+    max-width: 100%;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.map-parts .part.active > img {
+    opacity: 1 !important;
+}
+
+.map-parts .part > img {
+    transition: 500ms;
+    max-width: initial;
+    opacity: .5;
+}
+
+.map-parts .part .popup-info {
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
+}
+
+.map-parts .part:not(:hover) .popup-info {
+    z-index: -1;
+    pointer-events: none;
+}
+
+.map-parts .part.sumatera .popup-info {
+    top: 13%;
+    left: -50%;
+    max-width: 10rem;
+}
+
+.map-parts .part.kalimantan .popup-info {
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30rem;
+}
+
+.map-parts .part.sulawesi .popup-info {
+    top:  50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 20rem;
+}
+
+.map-parts .part.jawa .popup-info {
+    width: 20rem;
+    bottom: -100%;
+}
+
+.map-parts .part.nusa-tenggara .popup-info {
+    width: 20rem;
+    bottom: -150%;
+}
+
+.map-parts .part.maluku .popup-info {
+    top: 0;
+    left: -20%;
+    transform: translateY(-80%);
+    width: 20rem;
+}
+
+.map-parts .part.papua .popup-info {
+    top: 0;
+    left: 120%;
+    width: 15rem;
+}
+
+.map-parts .part.active > .popup-info {
+    opacity: 1;
+}
+
+.dimensions-card > div {
+    position: relative;
+    min-height: 0;
+    flex: 1;
+    place-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid var(--brown);
+    background: var(--beige);
+}
+
+.hubungi-perajin, .hubungi-perajin > div.flex-column {
+    align-items: flex-start;
+}
+
+.hubungi-perajin > .pfp {
+    max-width: 4rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.hubungi-perajin > div.flex-column > small {
+    margin-top: -1rem;
+}
+
+.hubungi-perajin .ghost-button,
+.hubungi-perajin .underline-button {
+    --color: var(--brown);
+    color: var(--brown);
+    font-family: 'Antique Ancienne Italic';
+}
+
+.end {
+    align-items: center;
+    gap: 4rem;
+}
+
+.end > img {
+    flex: 1;
+    min-width: 0;
+    object-fit: contain;
+}
+
+.end > div {
+    flex: 2;
+    min-width: 0;
+}
+
+.end > ul {
+    flex: 1;
+    gap: 2rem;
+    padding-block: 2rem;
+    border-right: 1px solid var(--brown);
+    font-size: .8rem;
+    text-align: right;
+}
+
+.end > ul > li {
+    position: relative;
+    padding-right: 2rem;
+    font-family: 'Antique Ancienne Italic';
+    font-weight: bold;
+}
+
+.end > ul > li::after {
+    --width: 1rem;
+    content: '';
+    position: absolute;
+    right: calc((var(--width) / 2) * -1);
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.end > ul > li:first-child::after {
+    background-color: var(--brown);
+}
+
+.end > ul > li:not(:first-child)::after {
+    background-color: var(--beige);
+    border: 1px solid var(--brown);
+}
+
+.end > div.flex-column ul li {
+    gap: 1rem;
+}
+
+.end > div.flex-column ul li::before {
+    content: '•';
+}
+
+@media only screen and (max-width: 810px) {
+    .map-parts {
+        scale: .8;
+    }
+
+    .map-parts .part.sumatera .popup-info {
+        left: -30%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .map-parts .part:hover > img {
+        opacity: 1;
+    }
+    .map-parts .part:hover > .popup-info,
+    .map-parts .part.active > .popup-info {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .map-parts {
+        scale: .6;
+    }
+
+    .map-parts .popup-info {
+        scale: 1.5;
+        transform: translate(-50%, -50%) !important;
+        pointer-events: none;
+    }
+
+    .map-parts .part.sumatera .popup-info {
+        max-width: 20rem;
+        width: 20rem;
+        top: 50%;
+        left: 100%;
+    }
+
+    .map-parts .part.kalimantan .popup-info {
+        max-width: 20rem;
+        width: 20rem;
+        top: 50%;
+        left: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main.flex-column {
+        height: initial;
+    }
+
+    .step-1-choices,
+    .dimensions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        overflow-x: initial;
+    }
+
+    .end {
+        flex-direction: column;
+    }
+    
+    .end > ul {
+        border: none;
+        border-top: 1px solid var(--brown);
+        padding: 0 2rem 0 2rem;
+        flex-direction: row;
+    }
+
+    .end > ul > li {
+        padding: 2rem 0 2rem 0;
+        text-align: center;
+    }
+
+    .end > ul > li::after {
+        right: 50%;
+        transform: translateX(50%);
+        top: calc((var(--width) / 2) * -1);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .map-parts {
+        scale: .5;
+    }
+
+    .map-parts .popup-info {
+        scale: 1.8;
+    }
+
+    .map-parts .part.jawa .popup-info,
+    .map-parts .part.maluku .popup-info {
+        left: 50%;
+    }
+
+    .map-parts .part.maluku .popup-info {
+        top: 20%;
+    }
+}
+  

@@ -1,0 +1,119 @@
+nav.main-nav a {
+    --color: var(--brown);
+}
+
+nav .menu-button img {
+    fill: var(--brown);
+}
+
+main.flex-row {
+    padding: 12rem 6rem 4rem 6rem;
+    align-items: center;
+    gap: 4rem;
+}
+
+main.flex-row > div > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+main.flex-row .checkout-buttons button {
+    margin-top: 2rem;
+    font-family: 'Antique Ancienne Italic';
+}
+
+.checkout-buttons .ghost-button {
+    --color: var(--brown);
+}
+
+.checkout-buttons button.ghost-button:has(img) {
+    padding: 1rem;
+}
+
+section.product-desc.flex-column {
+    padding-inline: 8rem;
+    gap: 4rem;
+}
+
+section.product-desc .row-1 {
+    gap: 6rem;
+}
+
+section.product-desc .row-1 > * {
+    flex: 1;
+}
+
+section.product-desc .row-1 img {
+    width: 4rem;
+    border-radius: 50%;
+}
+
+section.product-desc .row-2 {
+    gap: 2rem;
+}
+
+section.product-desc .row-2 > div:nth-child(1) {
+    gap: 4rem;
+}
+
+section.product-desc .row-2 div:nth-child(1) h3 {
+    opacity: .3;
+}
+
+section.product-desc .row-2 .product-name-desc {
+    gap: 4rem;
+}
+
+section.product-desc .row-2 .lore-desc {
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+section.product-desc .row-2 .lore-desc:not(.open) {  
+    max-height: 7em;
+}
+
+section.product-desc .row-2 .lore-desc::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(#FAF0E100, var(--beige));
+    opacity: 0;
+    transition: 500ms;
+}
+
+section.product-desc .row-2 .lore-desc:not(.open)::after {  
+    opacity: 1;
+}
+
+section.product-desc .row-2 button.expand-desc {
+    color: var(--brown);
+}
+
+section.product-desc .row-2 .decoration-img {
+    max-width: 20vw;
+    object-fit: contain;
+}
+
+section.recommendations-section div.recommendation {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
+
+section.recommendations-section div.checkout-buttons {
+    margin-top: auto;
+}
+
+section.recommendations-section div.recommendation .recommendation-img {
+    height: 10rem;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+    section.product-desc .row-2 .product-name-desc {
+        gap: 1rem;
+        flex-direction: column;
+    }
+}

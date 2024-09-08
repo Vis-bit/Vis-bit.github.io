@@ -1,0 +1,84 @@
+nav.main-nav a {
+    --color: var(--brown);
+}
+
+main {
+    padding-top: 12rem;
+}
+
+main > h5 {
+    margin-bottom: 2rem;
+}
+
+.item {
+    gap: 2rem;
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--brown);
+}
+
+.item input[type="checkbox"] {
+    width: 2rem;
+}
+
+.item > img {
+    width: 20%;
+    max-height: 15rem;
+    object-fit: contain;
+}
+
+.item > div {
+    padding-block: 2rem;
+}
+
+.item > .price {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.item-amount-controls {
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.item-amount-controls .ghost-button {
+    --color: var(--brown);
+    padding: .5rem;
+}
+
+.bottom-bar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--beige);
+    box-shadow: 0 -4px 10px 2px #78431330;
+    padding: 1rem 6rem;
+    color: var(--brown);
+    gap: 2rem;
+    align-items: center;
+}
+
+.bottom-bar label,
+.bottom-bar .ghost-button {
+    --color: var(--brown);
+    font-family: 'Antique Ancienne Italic';
+}
+
+.bottom-bar label {
+    flex: 1;
+}
+
+.bottom-bar > div.flex-row {
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .item > div > p {
+        display: none;
+    }
+
+    .item-amount-controls {
+        margin-top: 1rem;
+    }
+}

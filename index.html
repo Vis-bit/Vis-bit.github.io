@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nusaniture</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/base.js" defer></script>
+  </head>
+  <body>
+    <div id="darken-bg"></div>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <button class="close-icon">
+            <img src="graphics/close-icon.svg" alt="close-icon" />
+          </button>
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li class="flex-row">
+          <a class="login-link link" href="login.html"
+            ><button class="login-button main-button">Login</button></a
+          >
+          <a class="sign-up-link link" href="login.html"
+            ><button class="sign-up-button ghost-button">Daftar</button></a
+          >
+        </li>
+      </ul>
+      <button class="menu-button">
+        <img src="graphics/menu-icon.svg" alt="menu" />
+      </button>
+    </nav>
+    <main class="flex-column">
+      <h1>Kerajinan Nusantara Mendunia</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        pellentesque, tortor vel bibendum ultricies, justo felis hendrerit nunc,
+        ut tincidunt ante ante vel mi. Donec porta vestibulum turpis eget
+        semper. Duis magna mauris, efficitur sed aliquam non, lobortis a neque.
+        In ultricies nibh urna, eu sollicitudin sapien porta a. Maecenas elit
+        risus, sollicitudin sit amet dapibus a, vestibulum vel arcu. Aenean eu
+        euismod metus.
+      </p>
+      <button class="ghost-button">Telusuri</button>
+    </main>
+    <section class="search-section">
+      <div class="flex-row">
+        <div>
+          <img class="decoration-img" src="images/Wayang 3.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            pellentesque, tortor vel bibendum ultricies, justo felis hendrerit
+            nunc, ut tincidunt ante ante vel mi.
+          </p>
+        </div>
+        <form class="flex-column">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+          <label>
+            <select name="jenis-produk" id="jenis-produk">
+              <option value="" disabled selected>Jenis Produk</option>
+              <option value="furnitur">Furnitur</option>
+              <option value="ukiran-kayu">Ukiran kayu</option>
+              <option value="patung">Patung</option>
+              <option value="wayang">Wayang</option>
+            </select>
+          </label>
+          <label>
+            <select name="daerah" id="daerah">
+              <option value="" disabled selected>Daerah</option>
+              <option value="jawa">Jawa</option>
+              <option value="sumatera">Sumatera</option>
+              <option value="bali">Bali</option>
+              <option value="kalimantan">Kalimantan</option>
+              <option value="nusa-tenggara-timur">Nusa Tenggara Timur</option>
+              <option value="nusa-tenggara-barat">Nusa Tenggara Barat</option>
+              <option value="papua">Papua</option>
+              <option value="sulawesi">Sulawesi</option>
+            </select>
+          </label>
+          <label>
+            <input
+              type="text"
+              name="kisaran-harga"
+              placeholder="Kisaran Harga"
+            />
+          </label>
+          <label>
+            <textarea
+              name="deskripsi"
+              id="deskripsi"
+              placeholder="Deskripsi"
+            ></textarea>
+          </label>
+          <button type="submit" class="ghost-button">Telusuri</button>
+        </form>
+        <div>
+          <img class="decoration-img" src="images/Wayang 4.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="category-section">
+      <h2>Belanja Berdasarkan Kategori</h2>
+      <nav class="category-nav">
+        <ul>
+          <li>
+            <button class="underline-button active daerah">Daerah</button>
+          </li>
+          <li><button class="underline-button jenis">Jenis</button></li>
+        </ul>
+      </nav>
+      <div class="category category-carousel flex-row active">
+        <div class="category-inner-container active flex-row">
+          <div class="flex-row">
+            <img
+              src="images/category-img-1-1.png"
+              alt=""
+              style="min-width: 0"
+            />
+            <img
+              class="decoration-img"
+              src="images/category-img-1-2.png"
+              alt=""
+              style="min-width: 0"
+            />
+          </div>
+          <div>
+            <div class="category-carousel-description">
+              <h2>Sumatera</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem voluptatem alias earum! Dolorum delectus, adipisci
+                debitis modi sequi optio illum ratione labore temporibus dolorem
+                exercitationem quo, unde qui consequuntur fugit repudiandae
+                saepe culpa corrupti sapiente porro sed neque. Molestias, error!
+              </p>
+            </div>
+            <img
+              class="decoration-img"
+              src="images/category-img-1-3.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="category-inner-container flex-row">
+          <div class="flex-column" style="gap: 0">
+            <img
+              src="images/category-img-2-2.png"
+              alt=""
+              style="translate: 1rem 1rem"
+            />
+            <img
+              class="decoration-img"
+              src="images/category-img-2-1.png"
+              alt=""
+              style="width: 15rem; translate: -4rem"
+            />
+          </div>
+          <div>
+            <div class="category-carousel-description">
+              <h2>Jawa</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem voluptatem alias earum! Dolorum delectus, adipisci
+                debitis modi sequi optio illum ratione labore temporibus dolorem
+                exercitationem quo, unde qui consequuntur fugit repudiandae
+                saepe culpa corrupti sapiente porro sed neque. Molestias, error!
+              </p>
+            </div>
+            <img
+              class="decoration-img"
+              src="images/category-img-2-3.png"
+              alt=""
+              style="translate: -10rem"
+            />
+          </div>
+        </div>
+        <div class="category-inner-container flex-row">
+          <div>
+            <img
+              src="images/category-img-3-1.png"
+              alt=""
+              style="width: 20rem; margin-inline: -4rem"
+            />
+            <img
+              class="decoration-img"
+              src="images/category-img-3-2.png"
+              alt=""
+              style="translate: 0 -5rem"
+            />
+          </div>
+          <div>
+            <div class="category-carousel-description">
+              <h2>Nusa Tenggara Timur</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem voluptatem alias earum! Dolorum delectus, adipisci
+                debitis modi sequi optio illum ratione labore temporibus dolorem
+                exercitationem quo, unde qui consequuntur fugit repudiandae
+                saepe culpa corrupti sapiente porro sed neque. Molestias, error!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="category-inner-container flex-row">
+          <div class="flex-row" style="gap: 0; align-items: center">
+            <div class="flex-column">
+              <img
+                class="decoration-img"
+                src="images/category-img-4-1.png"
+                alt=""
+                style="margin-block: -1em"
+              />
+              <img
+                class="decoration-img"
+                src="images/category-img-4-2.png"
+                alt=""
+                style="margin-block: -1em"
+              />
+            </div>
+            <img src="images/category-img-4-3.png" alt="" />
+          </div>
+          <div>
+            <div class="category-carousel-description">
+              <h2>Bali</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem voluptatem alias earum! Dolorum delectus, adipisci
+                debitis modi sequi optio illum ratione labore temporibus dolorem
+                exercitationem quo, unde qui consequuntur fugit repudiandae
+                saepe culpa corrupti sapiente porro sed neque. Molestias, error!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="category-inner-container flex-row">
+          <div class="flex-row">
+            <img
+              src="images/category-img-5-1.png"
+              alt=""
+              style="min-width: 0"
+            />
+            <img
+              class="decoration-img"
+              src="images/category-img-5-2.png"
+              alt=""
+              style="min-width: 0"
+            />
+          </div>
+          <div>
+            <div class="category-carousel-description">
+              <h2>Maluku</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolorem voluptatem alias earum! Dolorum delectus, adipisci
+                debitis modi sequi optio illum ratione labore temporibus dolorem
+                exercitationem quo, unde qui consequuntur fugit repudiandae
+                saepe culpa corrupti sapiente porro sed neque. Molestias, error!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-page-indicator flex-row">
+          <button class="active"></button>
+          <button></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <div class="category category-types flex-row">
+        <div class="flex-column">
+          <div class="category-types-item">
+            <img src="images/category-type-furnitur.png" alt="furnitur" />
+            <div>
+              <h5>Furnitur</h5>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Similique, consequatur!
+              </p>
+            </div>
+          </div>
+          <div
+            class="category-types-item"
+            style="margin-block: -2rem; align-self: end"
+          >
+            <img src="images/category-type-wayang.png" alt="wayang" />
+            <div>
+              <h5>Wayang</h5>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum,
+                provident!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="category-types-item">
+            <img src="images/category-type-patung.png" alt="patung" />
+            <div>
+              <h5>Patung</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis,
+                sequi!
+              </p>
+            </div>
+          </div>
+          <div class="category-types-item">
+            <img
+              src="images/category-type-ukiran-dekoratif.png"
+              alt="ukiran-dekoratif"
+            />
+            <div>
+              <h5>Ukiran Dekoratif</h5>
+              <p>
+                Porro labore repellendus accusantium tenetur molestias ratione
+                culpa recusandae deserunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="decoration-img" src="images/Wayang 5.png" alt="wayang-5" />
+    </section>
+    <section class="bestsellers-section flex-column">
+      <h1>Bestsellers</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+        magnam.
+      </p>
+      <div>
+        <div class="bestsellers-carousel flex-row">
+          <div class="inside-carousel flex-row carousel-transitions">
+            <img src="images/bestsellers-section-img-4.png" alt="" />
+            <img src="images/bestsellers-section-img-5.png" alt="" />
+            <img
+              class="active"
+              src="images/bestsellers-section-img 1.png"
+              alt=""
+            />
+            <img src="images/bestsellers-section-img-2.png" alt="" />
+            <img src="images/bestsellers-section-img-3.png" alt="" />
+          </div>
+        </div>
+        <div class="bestsellers-product-desc">
+          <h5>Bufet Purbasari</h5>
+          <div class="flex-row">
+            <button class="left-button">
+              <img src="graphics/left-arrow.svg" alt="left-arrow" />
+            </button>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium saepe qui perferendis quam voluptate non laboriosam et
+              officia eligendi suscipit?
+            </p>
+            <button class="right-button">
+              <img src="graphics/right-arrow.svg" alt="right-arrow" />
+            </button>
+          </div>
+          <p class="bestsellers-price">Rp 5.000.000,00</p>
+        </div>
+      </div>
+    </section>
+    <section class="img-section">
+      <div
+        class="img-item"
+        style="--i: 0; background-image: url('images/img-1.jpg')"
+      >
+        <h2>Dibuat dengan sepenuh hati</h2>
+        <p class="vertical-text">Proses pembuatan wayang kulit di Jawa</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+          sunt voluptatibus iusto inventore maxime consequuntur illo nihil enim
+          libero, assumenda autem eveniet temporibus corrupti excepturi in
+          veniam quae necessitatibus natus!
+        </p>
+      </div>
+      <div
+        class="img-item"
+        style="--i: 1; background-image: url('images/img-2.jpg')"
+      >
+        <h2>Bahan dari Nusantara</h2>
+        <p class="vertical-text">Materi yang dipakai dipanen dari Nusantara</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+          sunt voluptatibus iusto inventore maxime consequuntur illo nihil enim
+          libero, assumenda autem eveniet temporibus corrupti excepturi in
+          veniam quae necessitatibus natus!
+        </p>
+      </div>
+      <div
+        class="img-item"
+        style="--i: 2; background-image: url('images/img-3.jpg')"
+      >
+        <h2>Ukiran khas Indonesia</h2>
+        <p class="vertical-text">Ukiran kayu di furnitur mencerminkan budaya</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+          sunt voluptatibus iusto inventore maxime consequuntur illo nihil enim
+          libero, assumenda autem eveniet temporibus corrupti excepturi in
+          veniam quae necessitatibus natus!
+        </p>
+      </div>
+      <div
+        class="img-item"
+        style="--i: 3; background-image: url('images/img-4.jpg')"
+      >
+        <h2>Dirakit oleh pengrajin lokal</h2>
+        <p class="vertical-text">Seorang pengrajin kayu lokal membuat meja</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+          sunt voluptatibus iusto inventore maxime consequuntur illo nihil enim
+          libero, assumenda autem eveniet temporibus corrupti excepturi in
+          veniam quae necessitatibus natus!
+        </p>
+      </div>
+    </section>
+    <section class="workshop-section flex-row">
+      <div class="workshop-desc">
+        <h1>Workshop</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          necessitatibus sed, esse ducimus inventore fugiat tempore nulla quis
+          ipsam expedita molestiae ipsum molestias! Hic nobis dicta accusantium
+          facere quis aperiam!
+        </p>
+        <div>
+          <div>
+            <img src="graphics/globe-icon.svg" alt="globe-icon" />
+            <p>Terletak di <br />mancanegara</p>
+          </div>
+          <div>
+            <img src="graphics/calendar-icon.svg" alt="calendar-icon" />
+            <p>Untuk jangka <br />waktu terbatas</p>
+          </div>
+          <div>
+            <img src="graphics/checklist-icon.svg" alt="checklist-icon" />
+            <p>Diselenggarakan <br />oleh perajin lokal</p>
+          </div>
+        </div>
+      </div>
+      <div class="workshop-images decoration-img">
+        <div>
+          <img
+            src="images/mebel_jepara_jawa-removebg-preview 2.png"
+            alt="mebel-jepara-jawa"
+          />
+        </div>
+        <div>
+          <img
+            src="images/pulau_samosir_batak_patung-removebg-preview 1.png"
+            alt="pulau-samosir-batak-patung"
+          />
+        </div>
+        <div>
+          <img
+            src="images/wayang-purwa-desa_puncung_di_bantul-removebg-preview 3.png"
+            alt="wayang-purwa-desa-puncung-di-bantul"
+          />
+        </div>
+      </div>
+      <img class="decoration-img" src="images/Wayang 7.png" alt="wayang-7" />
+    </section>
+    <section class="testimonials-section flex-row">
+      <img
+        class="appendage-img"
+        src="graphics/testimonials-section-top-appendage.svg"
+        alt=""
+      />
+      <div class="flex-column">
+        <img src="images/testimonial-1.jpg" alt="" />
+        <h5>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</h5>
+        <p>Wahidin Soedirohoesodo<br /><small>Pengrajin Wayang</small></p>
+      </div>
+      <div class="vl"></div>
+      <div class="flex-column">
+        <h5>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</h5>
+        <p>Adita Supratman<br /><small>Pengrajin Patung Kayu</small></p>
+        <img src="images/testimonial-2.jpg" alt="" />
+      </div>
+      <div class="vl long"></div>
+      <div class="flex-column">
+        <img src="images/testimonial-3.jpg" alt="" />
+        <h5>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</h5>
+        <p>Wayan Alexander<br /><small>Pengrajin Furnitur Bali</small></p>
+      </div>
+      <div class="vl"></div>
+      <div class="flex-column">
+        <h5>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</h5>
+        <p>Megawati Jayapura<br /><small>Pengrajin Kursi Mebel</small></p>
+
+        <img src="images/testimonial-4.jpg" alt="" />
+      </div>
+      <img
+        class="appendage-img"
+        src="graphics/testimonials-section-bottom-appendage.svg"
+        alt=""
+      />
+    </section>
+    <section class="popup-stores-section">
+      <div class="flex-row popup-store-desc">
+        <img src="images/Wayang 8.png" alt="wayang-8" />
+        <div class="flex-column">
+          <img src="graphics/location-icon.svg" alt="location-icon" />
+          <h5>Prancis</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+            suscipit necessitatibus provident vel ipsum, distinctio harum
+            perferendis molestiae esse veniam?
+          </p>
+        </div>
+      </div>
+      <div class="flex-row popup-store-desc">
+        <img src="images/Wayang 9.png" alt="wayang-9" />
+        <div class="flex-column">
+          <img src="graphics/location-icon.svg" alt="location-icon" />
+          <h5>Jerman</h5>
+          <p>
+            Nihil, accusamus itaque minima recusandae fugiat ullam deleniti
+            praesentium expedita! Sit, earum quos tenetur at ullam distinctio
+            harum consectetur animi.
+          </p>
+        </div>
+      </div>
+      <h1>Popup Stores di Seluruh Penjuru Dunia</h1>
+      <div class="flex-row popup-store-desc">
+        <img src="images/Wayang 10.png" alt="wayang-10" />
+        <div class="flex-column">
+          <img src="graphics/location-icon.svg" alt="location-icon" />
+          <h5>Thailand</h5>
+          <p>
+            Officiis mollitia explicabo obcaecati delectus labore enim rerum
+            excepturi quis ratione quidem voluptate blanditiis illo quas
+            quisquam, quo expedita sit?
+          </p>
+        </div>
+      </div>
+      <div class="flex-row popup-store-desc">
+        <img src="images/Wayang 11.png" alt="wayang-11" />
+        <div class="flex-column">
+          <img src="graphics/location-icon.svg" alt="location-icon" />
+          <h5>Belanda</h5>
+          <p>
+            Autem veritatis suscipit voluptatibus quidem, facilis asperiores
+            nulla doloremque, cupiditate exercitationem corporis nostrum aliquam
+            consequuntur reiciendis eum magnam, velit tenetur!
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="flex-row">
+      <h1>Nusaniture</h1>
+      <div>
+        <ul class="flex-column">
+          <li>
+            <h5>Kunjungi Kami</h5>
+          </li>
+          <li><a href="">Indonesia</a></li>
+          <li><a href="">Belanda</a></li>
+          <li><a href="">Amerika Serikat</a></li>
+          <li><a href="">Jerman</a></li>
+          <li><a href="">Prancis</a></li>
+        </ul>
+        <ul class="flex-column">
+          <li>
+            <h5>Informasi</h5>
+          </li>
+          <li><a href="">Tentang Kami</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+        <ul class="flex-column">
+          <li>
+            <h5>Acara</h5>
+          </li>
+          <li><a href="">Toko Pop-Up</a></li>
+          <li><a href="">Pentas</a></li>
+        </ul>
+      </div>
+      <div class="bottom flex-row">
+        <p class="copyright">© 2024 Brand. All rights reserved.</p>
+        <ul class="flex-column social-media">
+          <li>
+            <img src="graphics/instagram-icon.svg" alt="instagram-icon" />
+          </li>
+          <li><img src="graphics/facebook-icon.svg" alt="facebook-icon" /></li>
+          <li><img src="graphics/tiktok-icon.svg" alt="tiktok-icon" /></li>
+          <li><img src="graphics/linkedin-icon.svg" alt="linkedin-icon" /></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

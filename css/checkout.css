@@ -1,0 +1,251 @@
+nav.main-nav a {
+    --color: var(--brown);
+}
+
+.subtext {
+    opacity: .5;
+}
+
+.ghost-button {
+    --color: var(--brown);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: clamp(10%, 12rem, 15vw);
+}
+
+main button {
+    font-family: 'Antique Ancienne Italic';
+}
+
+main .underline-button::after {
+    bottom: 0;
+}
+
+.product-details > div {
+    border-bottom: 1px solid var(--brown);
+}
+
+.product-details .checkout-item {
+    gap: 1.5rem;
+    align-items: center;
+    padding-block: 2rem;
+    height: 15rem;
+}
+
+.product-details .checkout-item > img {
+    height: 100%;
+}
+
+.product-details .checkout-item > div {
+    gap: .5rem;
+}
+
+.product-details .checkout-item > div > p {
+    margin-bottom: 1rem;
+}
+
+.product-details .checkout-item .item-amount-controls {
+    align-items: center;
+}
+
+.product-details .checkout-item .ghost-button {
+    padding: .5rem;
+}
+
+.product-details .total-price-container {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.product-details form {
+    gap: 0;
+}
+
+.product-details form input {
+    border: 1px solid var(--brown);
+    flex: 1;
+}
+
+.product-details form button.main-button {
+    --color: var(--brown);
+    color: var(--beige);
+}
+
+
+/* Additional Data */
+.customer-data-body,
+.delivery-options,
+.payment-options {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms;
+}
+
+.customer-head-body {
+    overflow: clip;
+    transition: max-height 500ms;
+}
+
+.customer-data {
+    margin-bottom: 1rem;
+}
+
+.customer-data,
+.delivery-data,
+.payment-method {
+    position: relative;
+    overflow: hidden;
+}
+
+.customer-data label {
+    gap: .5rem;
+}
+
+.customer-data label div.flex-column {
+    gap: 0;
+}
+
+.customer-data label,
+.customer-data input:not([name="nama"]) {
+    border: 1px solid var(--brown);
+    padding: 1rem;
+}
+
+.customer-data > label > input {
+    padding: 0;
+}
+
+.customer-data > label > input:focus-visible {
+    outline: none;
+}
+
+.customer-data > label:has(input:focus-visible) {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+.customer-data input::placeholder {
+    font-family: 'Antique Ancienne Regular';
+    font-size: 1rem;
+}
+
+.customer-data.edit-mode input::placeholder {
+    opacity: .5;
+}
+
+.customer-data-container:has(.edit-mode) .underline-button,
+.delivery-data-container:has(.edit-mode) .underline-button {
+    top: -2rem !important;
+}
+
+/* .customer-data.edit-mode small {
+    display: none;
+} */
+
+button.underline-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    color: var(--brown);
+    transition: 500ms;
+}
+
+.delivery-data-container button.underline-button {
+    top: .5rem;
+}
+
+.customer-data:not(.edit-mode),
+.delivery-data:not(.edit-mode),
+.payment-method:not(.edit-mode) {
+    transition: gap 300ms 200ms;
+    gap: 0;
+}
+
+.customer-data.edit-mode > label {
+    transition: gap 100ms 100ms;
+    gap: 0;
+}
+
+.delivery-data button.underline-button,
+.payment-method button.underline-button {
+    top: .5rem;
+}
+
+.delivery-data h6,
+.payment-method h6 {
+    font-family: 'Antique Ancienne Regular';
+}
+
+.delivery-data-item,
+.payment-method-item {
+    padding: .5rem 1rem;
+    border: 1px solid var(--brown);
+}
+
+.delivery-options,
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+.delivery-options > label,
+.payment-options > label {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: .5rem;
+    height: 4rem;
+    border: 1px solid var(--brown);
+}
+
+.delivery-options > label > input[type="radio"],
+.payment-options > label > input[type="radio"] {
+    appearance: none;
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.delivery-options > label:has(input[type="radio"]:checked),
+.payment-options > label:has(input[type="radio"]:checked) {
+    border: 2px solid var(--brown);
+}
+
+.delivery-options > label > img,
+.payment-options > label > img {
+    place-self: center;
+    object-fit: contain;
+}
+
+.delivery-options > label > p,
+.payment-options > label > p {
+    word-wrap: nowrap;
+}
+
+.delivery-options > label.active,
+.payment-options > label.active {
+    border: 2px solid var(--brown);
+}
+
+.delivery-data-container textarea,
+.payment-method textarea {
+    --color: var(--brown);
+    width: 100%;
+    resize: none;
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        padding: 6rem;
+        grid-template-columns: 1fr;
+    }
+}

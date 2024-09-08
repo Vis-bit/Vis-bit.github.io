@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="js/base.js" defer></script>
+    <script src="js/cart.js" defer></script>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <button class="close-icon">
+            <img src="graphics/close-icon.svg" alt="close-icon" />
+          </button>
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li class="flex-row">
+          <a class="login-link link" href="login.html"
+            ><button class="login-button main-button">Login</button></a
+          >
+          <a class="sign-up-link link" href="login.html"
+            ><button class="sign-up-button ghost-button">Daftar</button></a
+          >
+        </li>
+      </ul>
+      <button class="menu-button">
+        <img src="graphics/menu-icon-brown.svg" alt="menu" />
+      </button>
+    </nav>
+    <main>
+      <h5>Produk</h5>
+      <ul class="items-list flex-column">
+        <li class="item flex-row">
+          <input type="checkbox" name="pilih-produk" id="pilih-produk" /><img
+            src="images/bestsellers-section-img-3.png"
+            alt="ukiran-manik-angkeran"
+          />
+          <div>
+            <h5>Ukrian Manik Angkeran</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum assumenda illo illum repellat blanditiis ipsum.
+            </p>
+            <div class="flex-row item-amount-controls">
+              <button class="ghost-button add-btn">
+                <img src="graphics/plus-icon.svg" alt="plus-icon" />
+              </button>
+              <p>1</p>
+              <button class="ghost-button remove-btn">
+                <img src="graphics/minus-icon.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <small class="subtext">*max pembelian 2*</small>
+          </div>
+          <p class="price">Rp 7.000.000,00<br />1 item</p>
+        </li>
+        <li class="item flex-row">
+          <input type="checkbox" name="pilih-produk" id="pilih-produk" /><img
+            src="images/bestsellers-section-img-2.png"
+            alt="ukiran-manik-angkeran"
+          />
+          <div>
+            <h5>Patung Suri Ikan</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum assumenda illo illum repellat blanditiis ipsum.
+            </p>
+            <div class="flex-row item-amount-controls">
+              <button class="ghost-button add-btn">
+                <img src="graphics/plus-icon.svg" alt="plus-icon" />
+              </button>
+              <p>1</p>
+              <button class="ghost-button remove-btn">
+                <img src="graphics/minus-icon.svg" alt="minus-icon" />
+              </button>
+            </div>
+            <small class="subtext">*max pembelian 2*</small>
+          </div>
+          <p class="price">Rp 7.000.000,00<br />1 item</p>
+        </li>
+      </ul>
+    </main>
+    <div class="bottom-bar flex-row">
+      <label for="pilih-semua" class="pilih-semua flex-row">
+        <input type="checkbox" name="pilih-semua" id="pilih-semua" />
+        Pilih Semua
+      </label>
+      <div class="flex-row">
+        <h5>Total:</h5>
+        <p>Rp 7.000.000,00</p>
+      </div>
+      <button class="ghost-button">Checkout</button>
+    </div>
+    <footer class="flex-row">
+      <h1>Nusaniture</h1>
+      <div>
+        <ul class="flex-column">
+          <li>
+            <h5>Kunjungi Kami</h5>
+          </li>
+          <li><a href="">Indonesia</a></li>
+          <li><a href="">Belanda</a></li>
+          <li><a href="">Amerika Serikat</a></li>
+          <li><a href="">Jerman</a></li>
+          <li><a href="">Prancis</a></li>
+        </ul>
+        <ul class="flex-column">
+          <li>
+            <h5>Informasi</h5>
+          </li>
+          <li><a href="">Tentang Kami</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+        <ul class="flex-column">
+          <li>
+            <h5>Acara</h5>
+          </li>
+          <li><a href="">Toko Pop-Up</a></li>
+          <li><a href="">Pentas</a></li>
+        </ul>
+      </div>
+      <div class="bottom flex-row">
+        <p class="copyright">© 2024 Brand. All rights reserved.</p>
+        <ul class="flex-column social-media">
+          <li>
+            <img src="graphics/instagram-icon.svg" alt="instagram-icon" />
+          </li>
+          <li><img src="graphics/facebook-icon.svg" alt="facebook-icon" /></li>
+          <li><img src="graphics/tiktok-icon.svg" alt="tiktok-icon" /></li>
+          <li><img src="graphics/linkedin-icon.svg" alt="linkedin-icon" /></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

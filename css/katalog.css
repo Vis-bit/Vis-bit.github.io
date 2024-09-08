@@ -1,0 +1,181 @@
+nav.main-nav a {
+    --color: var(--beige);
+}
+
+main.flex-row {
+    min-height: 85dvh;
+}
+
+main .ghost-button,
+nav .ghost-button {
+    --hover-color: transparent;
+}
+
+nav .ghost-button::before {
+    border: 1px solid var(--beige);
+}
+
+nav .ghost-button:hover::before {
+    background-color: transparent;
+}
+
+nav.main-nav ul .sign-up-button {
+    --color: var(--beige)
+}
+
+nav.main-nav ul .login-button.main-button {
+    --color: var(--beige);
+    color: var(--brown);
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    padding-block: 12rem;
+    background-image: url('../images/catalog-main-img.jpg');
+    color: white;
+}
+
+main > h1 {
+    margin-left: 4rem;
+}
+
+main > * {
+    flex: 1;
+}
+
+main > div:nth-child(2) {
+    align-items: center;
+    text-align: center;
+}
+
+main .ghost-button {
+    --hover-color: transparent;
+    align-self: center;
+}
+
+main .ghost-button::before {
+    border: 1px solid var(--beige);
+    z-index: 1;
+}
+
+main .ghost-button:hover::before {
+    background-color: transparent;
+}
+
+section.catalog h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.catalog-contents {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 4rem;
+}
+
+.catalog-contents:has(.filter-container.hidden) {
+    grid-template-columns: 1fr;
+}
+
+.catalog-contents .ghost-button {
+    --color: var(--brown);
+    font-family: 'Antique Ancienne Italic';
+}
+
+.filter-container {
+    position: relative;
+    gap: 4rem;
+}
+
+.filter-container.hidden .filter,
+.filter-container.hidden hr {
+    display: none;
+}
+
+.filter-container.hidden div:has(.filter-toggle) {
+    position: absolute;
+    top: -2rem;
+    width: 30%;
+}
+
+.filter-container > div:has(button.filter-toggle) {
+    justify-content: space-between;
+    padding: 1rem .5rem;
+    border-bottom: 1px solid var(--brown);
+}
+
+.filter-container hr {
+    border: 1px solid var(--brown);
+}
+
+.filter > div.flex-row {
+    flex-wrap: wrap;
+}
+
+.filter .input-kisaran-harga {
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--brown50);
+}
+
+.filter input {
+    --color: var(--brown);
+    width: 100%;
+}
+
+.filter input::placeholder {
+    opacity: .5;
+}
+
+.filter .ghost-button.active {
+    border: 2px solid var(--brown);
+}
+
+.catalog-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.catalog-contents:has(.filter-container.hidden) .catalog-products {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card {
+    text-align: center;
+    align-items: center;
+}
+
+.product-card .card-img {
+    height: 10rem;
+    object-fit: contain;
+}
+
+.product-card a {
+    color: var(--brown);
+}
+
+.product-card a h5 {
+    transition: 300ms;
+}
+
+.product-card a:hover h5 {
+    letter-spacing: .05em;
+}
+
+.product-card .checkout-buttons {
+    margin-top: 2rem;
+}
+
+.product-card .checkout-buttons button.ghost-button:has(img) {
+    padding: 1rem;
+}
+
+.product-card .checkout-buttons button:has(a) {
+    padding: 0;
+}
+
+.product-card .checkout-buttons button a {
+    padding: 1rem 2rem;
+}

@@ -1,0 +1,686 @@
+/* Main */
+main {
+    mask-image: url('../images/main-img-mask.png');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url('../images/main-img.png');
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    text-align: center;
+    height: 120dvh;
+}
+
+main > :first-child {
+    margin-top: -4rem;
+}
+
+main .ghost-button,
+nav .ghost-button {
+    --hover-color: transparent;
+}
+
+main .ghost-button::before,
+nav .ghost-button::before {
+    border: 1px solid var(--beige);
+}
+
+main .ghost-button:hover::before,
+nav .ghost-button:hover::before {
+    background-color: transparent;
+}
+
+nav.main-nav a,
+nav.main-nav ul .sign-up-button {
+    --color: var(--beige)
+}
+
+nav.main-nav ul .login-button.main-button {
+    --color: var(--beige);
+    color: var(--brown);
+}
+
+
+
+/* Search Section */
+.search-section {
+    display: grid;
+    place-items: center;
+    padding: 6rem 0 8rem 6rem;
+}
+
+.search-section > div {
+    gap: 3rem;
+}
+
+.search-section > div > div {
+    flex: 2;
+}
+
+.search-section > div > div:nth-of-type(1) {
+    align-self: center;
+}
+
+.search-section > div > div:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+.search-section > div form {
+    flex: 3;
+    gap: 1rem;
+}
+
+.search-section > div form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search-section > div form button {
+    --color: var(--brown);
+    align-self: center;
+}
+
+.search-section > div form input,
+.search-section > div form textarea,
+.search-section div form select {
+    width: 100%;
+    --color: var(--brown);
+}
+
+
+
+/* Category Section */
+.category-section {
+    position: relative;
+}
+
+.category-section > h2 {
+    text-align: center;
+}
+ 
+.category-section > *:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.category-section > .category:not(.active) {
+    display: none;
+}
+
+.category-nav button {
+    color: var(--brown);
+    font-family: 'Antique Ancienne Italic', Urbanist;
+    font-size: 1.25rem;
+    transition: 300ms;
+}
+
+.category-nav button:not(.active) {
+    opacity: .5;
+}
+
+.category-nav button:not(.active)::after {
+    height: 1px;
+}
+
+.category-nav button:not(.active):hover {
+    opacity: .7;
+}
+
+
+.category-carousel {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.category-inner-container {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: min(70dvh, 40rem);
+}
+
+.category-inner-container img {
+    object-fit: contain;
+}
+
+.category-inner-container:not(.active) {
+    opacity: 0;
+    display: none;
+}
+
+.category-inner-container.active {
+    animation: opacity-animation 500ms forwards;
+}
+
+.category-types {
+    gap: 0;
+    opacity: 0;
+}
+
+.category-types.active {
+    animation: opacity-animation 500ms forwards;
+}
+
+.category-types > div {
+    align-items: center;
+    gap: 0;
+}
+
+.category-types-item {
+    position: relative;
+}
+
+.category-types-item * {
+    transition: 500ms;
+}
+
+.category-types-item > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: var(--beige);
+    text-align: center;
+    opacity: 0;
+}
+
+.category-types-item:hover > div,
+.category-types-item:hover::before {
+    transition: 500ms;
+    opacity: 1;
+}
+
+.category-types-item:hover > img {
+    filter: brightness(50%);
+}
+
+.category-types-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    filter: blur(30px) brightness(.5);
+    opacity: 0;
+}
+
+.category-types-item:has(img[src="images/category-type-furnitur.png"])::before {
+    background-image: url('../images/category-type-furnitur.png');
+}
+
+.category-types-item:has(img[src="images/category-type-wayang.png"])::before {
+    background-image: url('../images/category-type-wayang.png');
+}
+
+.category-types-item:has(img[src="images/category-type-patung.png"])::before {
+    background-image: url('../images/category-type-patung.png');
+}
+
+.category-types-item:has(img[src="images/category-type-ukiran-dekoratif.png"])::before {
+    background-image: url('../images/category-type-ukiran-dekoratif.png');
+}
+
+@keyframes opacity-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.category-inner-container > div:nth-of-type(2) p {
+    max-width: 60ch;
+}
+
+.category-carousel-description {
+    margin-bottom: 1rem;
+}
+
+.carousel-page-indicator {
+    position: absolute;
+    bottom: -2rem;
+}
+
+.carousel-page-indicator button {
+    width: .5rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--brown);
+    transition: 200ms;
+}
+
+.carousel-page-indicator button:not(.active) {
+    opacity: .5;
+}
+
+.category-section > img.decoration-img {
+    position: absolute;
+    bottom: -10rem;
+    right: 0;
+    z-index: 100;
+}
+
+
+
+/* Bestsellers Section */
+.bestsellers-section {
+    position: relative;
+    background-color: var(--coffee);
+    text-align: center;
+    overflow-x: clip;
+    justify-content: center;
+    height: min(180dvh, 80rem);
+}
+
+.bestsellers-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-image: url('../graphics/bestsellers-section-appendage.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.bestsellers-section > p {
+    margin: 0 auto;
+}
+
+.bestsellers-carousel {
+    height: min(100dvh, 30rem);
+    justify-content: center;
+}
+
+.bestsellers-carousel .inside-carousel {
+    --gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    position: relative;
+    justify-content: center;
+    gap: var(--gap);
+    padding-block: 2rem;
+    min-width: 150vw;
+}
+
+.carousel-transition {
+    transition: 500ms;
+}
+
+.bestsellers-carousel img {
+    --width: clamp(10rem, 15vw, 15vw);
+    max-height: 50%;
+    min-height: 0;
+    object-fit: contain;
+    transition: 500ms;
+    width: var(--width);
+}
+
+.bestsellers-carousel img.active {
+    width: 100%;
+    min-height: 100%;
+}
+
+.bestsellers-product-desc {
+    display: grid;
+    place-items: center;
+}
+
+.bestsellers-product-desc > *:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.bestsellers-product-desc .left-button,
+.bestsellers-product-desc .right-button {
+    min-width: 2rem;
+}
+
+
+
+/* Img Section */
+.img-section {
+    position: relative;
+    overflow: hidden;
+    height: clamp(30rem, 100vh, 50rem);
+}
+
+.img-item {
+    --width: 40%;
+    display: grid;
+    justify-items: start;
+    gap: 1rem;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 800ms cubic-bezier(0, 0, .3, 1.4);
+    color: white;
+    width: var(--width);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: calc(-20% + var(--width) * var(--i));
+}
+
+.img-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color:rgba(0, 0, 0, .2);
+}
+
+.img-item:last-of-type {
+    left: auto;
+    right: calc(100% - (-20% + var(--width) * 3) - var(--width) / 2);
+}
+
+.img-item:nth-of-type(1):hover,
+.img-section:has(.img-item:nth-of-type(1):hover) .img-item:nth-of-type(2) {
+    transform: translateX(var(--width));
+}
+
+.img-item:nth-of-type(4):hover,
+.img-section:has(.img-item:nth-of-type(4):hover) .img-item:nth-of-type(3) {
+    transform: translateX(calc(var(--width) * -1));
+}
+
+.img-item:nth-of-type(3):hover {
+    transform: translateX(calc(var(--width) * -1));
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    rotate: 180deg;
+}
+
+.img-item p {
+    text-align: center;
+}
+
+
+
+/* Workshop Section */
+.workshop-section {
+    justify-content: center;
+    align-items: center;
+    padding-left: 12rem;
+}
+
+.workshop-section h1 {
+    line-height: 2;
+}
+
+.workshop-section p {
+    font-family: 'Antique Ancienne Italic';
+}
+
+.workshop-desc {
+    flex: 1;
+}
+
+.workshop-desc > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 1rem;
+    /* max-width: 80%; */
+}
+
+.workshop-desc > div > div {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.workshop-desc > p {
+    margin-bottom: 3rem;
+}
+
+.workshop-images {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.workshop-images > div {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.workshop-images > div:nth-of-type(1) {
+    translate: -20% -30%;
+}
+
+.workshop-images > div:nth-of-type(2) {
+    translate: 100% -2rem;
+}
+
+.workshop-images > div:nth-of-type(3) {
+    translate: -2rem 5rem;
+}
+
+.workshop-images > div::before {
+    position: absolute;
+    font-family: 'Antique Ancienne Italic';
+    font-size: small;
+    text-wrap: nowrap;
+}
+
+.workshop-images > div:nth-of-type(1)::before {
+    content: 'Mebel Jepara, oleh Surtono Adiratna';
+    top: -.7rem;
+    left: 0;
+    rotate: -5deg;
+}
+
+.workshop-images > div:nth-of-type(2)::before {
+    content: 'Patung Samosir, oleh Damanik Napitupulu';
+    bottom: 45%;
+    left: 10%;
+    rotate: 93deg;
+}
+
+.workshop-images > div:nth-of-type(3)::before {
+    content: 'Wayang Purwa, oleh Tono Sudjojono';
+    left: 2rem;
+    bottom: -.5rem;
+    rotate: -2deg;
+}
+
+.workshop-section > img.decoration-img {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/* Testimonials Section */
+.testimonials-section {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    background-color: var(--coffee);
+    height: clamp(10rem, 60vh, 50rem);
+    padding-block: 0;
+    margin-top: 6rem;
+}
+
+.testimonials-section .appendage-img {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+}
+
+.testimonials-section .appendage-img:nth-of-type(1) {
+    bottom: 100%;
+}
+
+.testimonials-section .appendage-img:nth-of-type(2) {
+    top: 100%;
+}
+
+.testimonials-section > div {
+    align-items: center;
+}
+
+.testimonials-section > div img {
+    max-width: 80%;
+    border-radius: 50%;
+}
+
+.testimonials-section > .vl {
+    width: 1px;
+    height: 80%;
+    background-color: black;
+}
+
+.testimonials-section > .vl.long {
+    height: 100%;
+}
+
+/* popup Stores Section */
+.popup-stores-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 5rem;
+}
+
+.popup-stores-section h1 {
+    grid-column: 1 / -1;
+}
+
+.popup-stores-section > div.popup-store-desc img {
+    object-fit: contain;
+    max-width: 50%;
+}
+
+.popup-stores-section > div.popup-store-desc:nth-child(even) {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.popup-stores-section > div.popup-store-desc img[alt="location-icon"] {
+    width: 2rem;
+}
+
+.popup-stores-section > div.popup-store-desc {
+    position: relative;
+}
+
+.popup-stores-section > div.popup-store-desc::after {
+    content: '';
+    position: absolute;
+    width: clamp(10%, 5rem, 10vw);
+    aspect-ratio: 1 / 1;
+    background-size: 100% 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popup-stores-section > div.popup-store-desc:nth-of-type(1)::after {
+    background-image: url('../graphics/line-1.svg');
+    top: 100%;
+}
+
+.popup-stores-section > div.popup-store-desc:nth-of-type(2)::after {
+    background-image: url('../graphics/line-2.svg');
+    top: 100%;
+}
+
+.popup-stores-section > div.popup-store-desc:nth-of-type(3)::after {
+    background-image: url('../graphics/line-3.svg');
+    bottom: 100%;
+}
+
+.popup-stores-section > div.popup-store-desc:nth-of-type(4)::after {
+    background-image: url('../graphics/line-4.svg');
+    left: 30%;
+    bottom: 100%;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .category-carousel .decoration-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .search-section {
+        padding: 6rem 8rem;
+    }
+
+    .search-section > div > div:has(.decoration-img) {
+        display: none;
+    }
+
+    .workshop-section {
+        text-align: center;
+        padding: 6rem;
+    }
+
+    .workshop-desc > div {
+        margin: 0 auto;
+    }
+
+    .testimonials-section div.flex-column:last-of-type,
+    .testimonials-section div.vl:has(+ div.flex-column:last-of-type) {
+        display: none;
+    }
+
+    .popup-stores-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bestsellers-carousel {
+        height: min(60dvh, 20rem);
+    }
+
+    .bestsellers-carousel .inside-carousel {
+        padding-block: 2rem;
+    }
+
+    .testimonials-section div.flex-column:nth-of-type(5),
+    .testimonials-section div.vl:has(+ div.flex-column:nth-of-type(5)) {
+        display: none;
+    }
+
+    .category-inner-container {
+        flex-direction: column;
+    }
+
+    .category-inner-container img[src="images/category-img-3-1.png"] {
+        margin-inline: 0 !important;
+    }
+
+    .category-inner-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category-inner-container > div:nth-child(1) {
+        flex-shrink: 1;
+        min-height: 0;
+        align-items: center;
+    }
+    
+    .category-inner-container img {
+        max-height: 100%;
+    }
+}
